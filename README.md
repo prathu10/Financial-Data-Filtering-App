@@ -17,9 +17,5 @@ Your app is ready to be deployed!
 This project is deployed on Netlify. 
 Link to deployed app: https://financialdatafilteringapp.netlify.app/
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
 # Financial-Data-Filtering-App
 630bdef40f177a2b6d8ae8044e13f9a003cc8ac1
