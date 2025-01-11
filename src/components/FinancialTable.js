@@ -1,30 +1,31 @@
 import React from 'react';
 
 const FinancialTable = ({ data }) => (
-  <table className="table-auto border-collapse border border-gray-200 w-full">
-    <thead>
-      <tr className="bg-gray-100">
-        <th className="border px-4 py-2">Date</th>
-        <th className="border px-4 py-2">Revenue</th>
-        <th className="border px-4 py-2">Net Income</th>
-        <th className="border px-4 py-2">Gross Profit</th>
-        <th className="border px-4 py-2">EPS</th>
-        <th className="border px-4 py-2">Operating Income</th>
-      </tr>
-    </thead>
-    <tbody>
-      {data.map((item, index) => (
-        <tr key={index}>
-          <td className="border px-4 py-2">{item.date}</td>
-          <td className="border px-4 py-2">{item.revenue}</td>
-          <td className="border px-4 py-2">{item.netIncome}</td>
-          <td className="border px-4 py-2">{item.grossProfit}</td>
-          <td className="border px-4 py-2">{item.eps}</td>
-          <td className="border px-4 py-2">{item.operatingIncome}</td>
+  <div className="overflow-x-auto">
+    <table className="table-auto border-collapse border border-gray-200 w-full text-sm">
+      <thead>
+        <tr className="bg-gradient-to-r from-blue-100 to-indigo-200 text-gray-700">
+          {['Date', 'Revenue', 'Net Income', 'Gross Profit', 'EPS', 'Operating Income'].map((header) => (
+            <th key={header} className="border px-4 py-2 text-left">
+              {header}
+            </th>
+          ))}
         </tr>
-      ))}
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        {data.map((item, index) => (
+          <tr key={index} className="hover:bg-indigo-50 transform hover:scale-105 transition-all duration-300">
+            <td className="border px-4 py-2">{item.date}</td>
+            <td className="border px-4 py-2">${item.revenue?.toLocaleString()}</td>
+            <td className="border px-4 py-2">${item.netIncome?.toLocaleString()}</td>
+            <td className="border px-4 py-2">${item.grossProfit?.toLocaleString()}</td>
+            <td className="border px-4 py-2">{item.eps}</td>
+            <td className="border px-4 py-2">${item.operatingIncome?.toLocaleString()}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
 );
 
 export default FinancialTable;
