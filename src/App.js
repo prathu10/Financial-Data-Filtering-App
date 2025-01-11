@@ -45,15 +45,15 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-blue-700">
-      {/* Header */}
+      
       <header className="bg-gradient-to-r from-indigo-600 to-blue-500 text-white text-center py-10 shadow-lg">
         <h1 className="text-4xl font-extrabold tracking-tight">📊 Financial Dashboard</h1>
         <p className="text-md md:text-lg mt-2">Filter, analyze, and explore key financial metrics</p>
       </header>
 
-      {/* Main Content */}
+     
       <main className="container mx-auto px-6 py-8">
-        {/* Filter Section */}
+        
         <section className="bg-white bg-opacity-70 shadow-xl rounded-lg p-6 md:p-8 mb-10">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">🔍 Filters</h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -85,7 +85,7 @@ const App = () => {
           </button>
         </section>
 
-        {/* Sorting Section */}
+        
         <section className="bg-white bg-opacity-70 shadow-xl rounded-lg p-6 md:p-8 mb-10">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">📈 Sorting Options</h2>
           <div className="flex flex-wrap gap-4">
@@ -115,14 +115,14 @@ const App = () => {
           </div>
         </section>
 
-        {/* Table Section */}
+       
         <section className="bg-white bg-opacity-70 shadow-xl rounded-lg p-6 md:p-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">💼 Financial Data</h2>
           <FinancialTable data={filteredData} />
         </section>
       </main>
 
-      {/* Footer */}
+     
       <footer className="bg-indigo-700 text-white text-center py-6 mt-10">
         <p className="text-sm">© 2025 Financial Dashboard. All Rights Reserved.</p>
       </footer>
